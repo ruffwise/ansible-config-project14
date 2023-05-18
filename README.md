@@ -33,7 +33,6 @@ source ~/.bash_profile
 - systemctl start php-fpm
 - systemctl enable php-fpm
 
-
 #### Ansible dependencies to install
 =====================================
 * For Mysql Database
