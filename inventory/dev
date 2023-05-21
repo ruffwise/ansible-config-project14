@@ -1,7 +1,8 @@
 [nginx]
 192.168.100.22 ansible_ssh_user='ubuntu'
 
-
 [db]
 192.168.100.23 ansible_ssh_user='ubuntu'
 
+[todo]
+192.168.100.25 ansible_ssh_user='ubuntu'
