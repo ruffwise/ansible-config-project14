@@ -50,21 +50,21 @@
 
     - name: Download the artifact
       get_url:
-        url: http://3.125.156.235:8082/artifactory/PBL/php-todo
-        dest: /home/ec2-user/
+        url: http://35.208.188.244:8082/artifactory/PBL/php-todo
+        dest: /home/ubuntu/
         url_username: admin
-        url_password: APBKm4qXoDaoE4pTfHAD6iPnJMh  
+        url_password: cmVmdGtuOjAxOjE3MTYyMDA0NDE6c0k5Y1NoN3FiYk1ENGJvd0RiRW54NVpCakF4
 
 
     - name: unzip the artifacts
       ansible.builtin.unarchive:
-       src: /home/ec2-user/php-todo
-       dest: /home/ec2-user/
+       src: /home/ubuntu/php-todo
+       dest: /home/ubuntu/
        remote_src: yes
 
     - name: deploy the code
       ansible.builtin.copy:
-        src: /home/ec2-user/var/lib/jenkins/workspace/php-todo_main/
+        src: /home/ubuntu/var/lib/jenkins/workspace/php-todo_main/
         dest: /var/www/html/
         force: yes
         remote_src: yes
